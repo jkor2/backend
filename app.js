@@ -10,10 +10,7 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cors());
 
-app.get("/", (req, res) => {
-  // router
-  res.send("Hello world");
-});
+app.use("/", router);
 
 console.log("Cors connected ");
 
