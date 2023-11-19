@@ -7,7 +7,10 @@ var app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use("/", router);
+app.use("/", (req, res) => {
+  // router
+  res.send("Hello world");
+});
 console.log("Cors connected ");
 
 app.get("/api", (req, res) => {
