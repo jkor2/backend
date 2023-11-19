@@ -5,6 +5,10 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const Post = require("../models/blog");
 
+exports.test2 = asynchandler(async (req, res) => {
+  res.send("Hello WOrld213feew");
+});
+
 //Signup post (Need to update name)
 exports.testPost = asynchandler(async (req, res) => {
   try {
