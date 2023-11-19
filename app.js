@@ -5,9 +5,10 @@ require("dotenv").config();
 const router = require("./routes/index");
 var app = express();
 
+app.use(cors());
 app.use(express.json());
 app.use("/", router);
-app.use(cors());
+console.log("Cors connected ");
 
 app.get("/api", (req, res) => {
   res.json({ test: true });
