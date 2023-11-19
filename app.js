@@ -7,13 +7,7 @@ var app = express();
 
 app.use(express.json());
 app.use("/", router);
-app.use(
-  cors({
-    origin:
-      "https://65594e1db025a846b273eaa4--poetic-hotteok-658b06.netlify.app/",
-    // Additional options if needed...
-  })
-);
+app.use(cors());
 
 app.get("/api", (req, res) => {
   res.json({ test: true });
