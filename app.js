@@ -26,3 +26,4 @@ console.log("Cors connected ");
 app.get("/api", (req, res) => {
   res.json({ test: true });
 });
+app.listen(5000, () => console.log("App is listening on port 5000"));
