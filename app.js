@@ -5,6 +5,8 @@ require("dotenv").config();
 const router = require("./routes/index");
 var app = express();
 
+const port = 5000;
+
 mongoose.set("strictQuery", false);
 
 const DB = process.env.DBLINK;
@@ -25,4 +27,8 @@ console.log("Cors connected ");
 
 app.get("/api", (req, res) => {
   res.json({ test: true });
+});
+
+app.listen(port, () => {
+  console.log("Server started");
 });
